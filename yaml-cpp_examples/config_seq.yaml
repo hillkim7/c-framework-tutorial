@@ -1,0 +1,11 @@
+# installation modem cards.
+modemCards:
+  -
+    slot: 0
+    ip: '192.168.0.1'
+    type: 0
+  -
+    slot: 1
+    ip: '192.168.0.2'
+    type: 0
+
