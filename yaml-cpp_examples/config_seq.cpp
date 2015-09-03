@@ -5,7 +5,7 @@
 #include <string>
 #include <time.h>
 
-#include "yaml-cpp/yaml.h"
+#include <yaml-cpp/yaml.h>
 
 
 int main()
