@@ -6,5 +6,5 @@ simple_log.o: simple_log.cpp
 	g++ simple_log.cpp -c -DBOOST_LOG_DYN_LINK=1
 
 clean:
-	rm -rf *.o simple_log
+	rm -rf *.o simple_log *.log
 
