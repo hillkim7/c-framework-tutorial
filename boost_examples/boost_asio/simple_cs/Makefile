@@ -31,7 +31,7 @@ $(TARGETS): $(OBJS)
 
 %.o: %.c
 	@echo ">> %.o: $@ , $< <<"
-	$(CC) $(CFLAGS) $(INCPATH)  -o $@ -c $<
+	$(CC) $(CFLAGS) $(INCPATH) -o $@ -c $<
 
 
 clean:
