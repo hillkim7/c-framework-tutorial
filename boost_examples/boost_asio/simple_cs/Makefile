@@ -20,7 +20,8 @@ SRCS := $(wildcard *.cpp)
 OBJS := $(subst .cpp,.o,$(SRCS))
 TARGETS := $(subst .o,,$(OBJS))
 
-.PHONY: all
+all: $(TARGETS)
+
 $(TARGETS): $(OBJS)
 	$(CXX) -o $@ $@.o $(LDFLAGS) $(LIBS)
 
@@ -32,7 +33,6 @@ $(TARGETS): $(OBJS)
 	@echo ">> %.o: $@ , $< <<"
 	$(CC) $(CFLAGS) $(INCPATH)  -o $@ -c $<
 
-all: $(TARGETS)
 
 clean:
 	rm -rf $(TARGETS) $(OBJS)
