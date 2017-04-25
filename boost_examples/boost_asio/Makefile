@@ -4,7 +4,7 @@
 
 CXX = $(CROSS_COMPILE)g++
 
-TARGETS= shared_ptr_test thread1 daytime3 daytime2 daytime1 timer4 timer3 timer2 ref simple_log logging_filter steady_timer
+TARGETS= shared_ptr_test thread1 daytime3 daytime2 daytime1 timer4 timer3 timer2 ref simple_log logging_filter custom_log steady_timer
 
 CFLAGS = -g -Wall
 
@@ -55,6 +55,9 @@ simple_log: simple_log.cpp
 
 logging_filter: logging_filter.cpp
 	$(CXX) $(CFLAGS) -DBOOST_LOG_DYN_LINK=1 logging_filter.cpp -o $@ $(LDFLAGS) -lboost_system -lpthread $(LOG_LIB)
+
+custom_log: custom_log.cpp
+	$(CXX) $(CFLAGS) -DBOOST_LOG_DYN_LINK=1 custom_log.cpp -o $@ $(LDFLAGS) -lboost_system -lpthread $(LOG_LIB)
 
 clean:
 	rm -rf *.o $(TARGETS)
